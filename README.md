@@ -17,7 +17,7 @@
     }
   ],
   "require": {
-    "littlecat-team/xtscript-next": "dev-master"
+    "littlecat-team/xtscript-next": "master"
   }
 }
 ```
