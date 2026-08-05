@@ -1,4 +1,4 @@
-﻿vendor/
+vendor/
 composer.lock
 
 # IDE
@@ -15,3 +15,7 @@ Thumbs.db
 
 # Benchmarks output
 /benchmarks/output/
+
+# Build artifacts
+/build-phar.php
+/dist/
