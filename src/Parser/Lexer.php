@@ -125,11 +125,11 @@ final class Lexer
     /** @param list<Token> $tokens */
     private function expectsValue(array $tokens): bool
     {
-        $previous = $tokens[array_key_last($tokens)] ?? null;
-        if (!$previous instanceof Token) {
+        if ($tokens === []) {
             return true;
         }
 
+        $previous = $tokens[count($tokens) - 1];
         return in_array($previous->type, [
             TokenType::Operator,
             TokenType::LeftParen,

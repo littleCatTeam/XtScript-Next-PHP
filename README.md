@@ -17,7 +17,7 @@
     }
   ],
   "require": {
-    "littlecat-team/xtscript-next": "master"
+    "littlecat-team/xtscript-next": "1.0.0"
   }
 }
 ```
@@ -172,6 +172,29 @@ php -n tests/lint.php        # Syntax check (102 files)
 php -n tests/run.php         # Unit tests (117 scenarios)
 php -n tests/reflection.php  # Strict type audit
 php -n tests/fuzz.php        # Randomized parser fuzzing (3000 inputs)
+```
+
+## PHAR package
+
+Build a PHAR artifact:
+
+```bash
+php -d phar.readonly=0 build-releases.php
+```
+
+This creates `dist/xtscript-v1.0.0.phar`.
+
+Run the packaged PHAR directly:
+
+```bash
+php dist/xtscript-v1.0.0.phar [arguments]
+```
+
+If the file is executable, you can also run:
+
+```bash
+chmod +x dist/xtscript-v1.0.0.phar
+./dist/xtscript-v1.0.0.phar [arguments]
 ```
 
 ```bash

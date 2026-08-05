@@ -109,7 +109,8 @@ final class RuntimeState
 
     public function currentFunctionNamespace(): string
     {
-        return $this->functionNamespaces[array_key_last($this->functionNamespaces)] ?? '';
+        $index = array_key_last($this->functionNamespaces);
+        return $index !== null ? $this->functionNamespaces[$index] : '';
     }
 
 
@@ -146,7 +147,8 @@ final class RuntimeState
 
     public function escapeStrategy(): EscapeStrategy
     {
-        return $this->autoEscapeStack[array_key_last($this->autoEscapeStack)] ?? ($this->options->autoEscape ? $this->options->escapeStrategy : EscapeStrategy::None);
+        $index = array_key_last($this->autoEscapeStack);
+        return $index !== null ? $this->autoEscapeStack[$index] : ($this->options->autoEscape ? $this->options->escapeStrategy : EscapeStrategy::None);
     }
 
     public function autoEscapeEnabled(): bool
