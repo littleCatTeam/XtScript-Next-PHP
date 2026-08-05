@@ -1,0 +1,53 @@
+{
+  "name": "littleCatTeam/XtScript-Next",
+  "description": "Independent, modern and extensible XtScript-compatible template engine for PHP 8.2+.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "xtscript",
+    "xtgem-compatibility",
+    "template-engine",
+    "parser",
+    "php"
+  ],
+  "authors": [
+    {
+      "name": "littleCatTeam",
+      "role": "Author and maintainer"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "XtScript\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XtScript\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "php tests/lint.php",
+    "test": [
+      "@lint",
+      "php tests/run.php",
+      "php tests/reflection.php",
+      "php tests/fuzz.php",
+      "php tests/docs.php",
+      "php tests/examples.php"
+    ],
+    "benchmark": [
+      "php benchmarks/render.php",
+      "php benchmarks/backends.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "bin": [
+    "bin/xtscript"
+  ]
+}

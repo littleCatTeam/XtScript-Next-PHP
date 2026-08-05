@@ -1,0 +1,3 @@
+include partial.xt
+assign $who = <Admin>
+call @greet $name=$who;

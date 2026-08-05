@@ -1,0 +1,5 @@
+include partial.html
+call @hello $value=$name;
+foreach $items as $index => $item
+print [$index] $item<br />
+endforeach

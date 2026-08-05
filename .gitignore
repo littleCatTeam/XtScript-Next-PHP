@@ -1,0 +1,17 @@
+﻿vendor/
+composer.lock
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHP
+*.cache
+*.local
+
+# Benchmarks output
+/benchmarks/output/
