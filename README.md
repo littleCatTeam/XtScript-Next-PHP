@@ -176,25 +176,50 @@ php -n tests/fuzz.php        # Randomized parser fuzzing (3000 inputs)
 
 ## PHAR package
 
-Build a PHAR artifact:
-
-```bash
-php -d phar.readonly=0 build-releases.php
-```
-
-This creates `dist/xtscript-v1.0.0.phar`.
+You can also download `xtscript-v1.0.0.phar` directly from the GitHub release assets instead of building it locally.
 
 Run the packaged PHAR directly:
 
 ```bash
-php dist/xtscript-v1.0.0.phar [arguments]
+php xtscript-v1.0.0.phar [command] [args]
+```
+
+Example commands:
+
+```bash
+php xtscript-v1.0.0.phar lint templates/
+php xtscript-v1.0.0.phar deps templates/ page
+php xtscript-v1.0.0.phar inspect templates/ page
+php xtscript-v1.0.0.phar compile templates/ cache/
+php xtscript-v1.0.0.phar warmup templates/ cache/
+php xtscript-v1.0.0.phar benchmark templates/ page 100
 ```
 
 If the file is executable, you can also run:
 
 ```bash
-chmod +x dist/xtscript-v1.0.0.phar
-./dist/xtscript-v1.0.0.phar [arguments]
+chmod +x xtscript-v1.0.0.phar
+./xtscript-v1.0.0.phar lint templates/
+```
+
+For help, use:
+
+```bash
+php xtscript-v1.0.0.phar help
+```
+
+### Use the PHAR as a library
+
+You can also require the PHAR from a PHP script without Composer:
+
+```php
+require 'xtscript-v1.0.0.phar';
+
+use XtScript\Engine;
+use XtScript\Loader\FilesystemLoader;
+
+$engine = new Engine(new FilesystemLoader(__DIR__ . '/templates'));
+echo $engine->render('page', ['name' => 'World']);
 ```
 
 ```bash
