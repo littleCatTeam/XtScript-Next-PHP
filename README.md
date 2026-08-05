@@ -2,7 +2,7 @@
 
 **Modern, extensible XtScript-compatible template engine for PHP 8.2+**
 
-`littleCatTeam/XtScript-Next` combines backward-compatible XtScript/XtGem syntax with a modular Composer architecture, default-context escaping, and a typed compilation pipeline. It draws design inspiration from Twig and Blade while preserving the practical template language that XtGem developers already know.
+`littlecat-team/xtscript-next` combines backward-compatible XtScript/XtGem syntax with a modular Composer architecture, default-context escaping, and a typed compilation pipeline. It draws design inspiration from Twig and Blade while preserving the practical template language that XtGem developers already know.
 
 ---
 
@@ -17,7 +17,7 @@
     }
   ],
   "require": {
-    "littleCatTeam/XtScript-Next": "dev-master"
+    "littlecat-team/xtscript-next": "dev-master"
   }
 }
 ```

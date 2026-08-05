@@ -19,7 +19,7 @@ Add the GitHub repository to your `composer.json`:
     }
   ],
   "require": {
-    "littleCatTeam/XtScript-Next": "dev-master"
+    "littlecat-team/xtscript-next": "master"
   }
 }
 ```
