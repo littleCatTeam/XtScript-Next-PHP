@@ -17,4 +17,5 @@ Thumbs.db
 /benchmarks/output/
 
 # Build artifacts
+/build-releases.php
 /dist/
