@@ -8,6 +8,14 @@
 
 ## Installation
 
+Use Composer to require the package:
+
+```bash
+composer require littlecat-team/xtscript-next
+```
+
+If you need to use the current Git repository directly, configure it as a VCS repository in `composer.json`:
+
 ```json
 {
   "repositories": [
@@ -15,15 +23,8 @@
       "type": "vcs",
       "url": "https://github.com/littleCatTeam/XtScript-Next-PHP"
     }
-  ],
-  "require": {
-    "littlecat-team/xtscript-next": "1.0.0"
-  }
+  ]
 }
-```
-
-```bash
-composer install
 ```
 
 Zero dependencies beyond PHP 8.2. No extensions required.
