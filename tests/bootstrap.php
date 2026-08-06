@@ -3,7 +3,10 @@
 declare(strict_types=1);
 
 error_reporting(E_ALL);
-set_error_handler(static function (int $severity, string $message, string $file, int $line): never {
+set_error_handler(static function (int $severity, string $message, string $file, int $line): void {
+    if (error_reporting() === 0) {
+        return;
+    }
     throw new ErrorException($message, 0, $severity, $file, $line);
 });
 

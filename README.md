@@ -176,6 +176,20 @@ php -n tests/fuzz.php        # Randomized parser fuzzing (3000 inputs)
 
 ## PHAR package
 
+Build a release PHAR from the repository:
+
+```bash
+php -d phar.readonly=0 build-releases.php 1.0.0
+```
+
+If your repository is tagged, `build-releases.php` can infer the version from the latest tag:
+
+```bash
+php -d phar.readonly=0 build-releases.php
+```
+
+This generates `xtscript-v1.0.0.phar` in the current directory.
+
 You can also download `xtscript-v1.0.0.phar` directly from the GitHub release assets instead of building it locally.
 
 Run the packaged PHAR directly:
