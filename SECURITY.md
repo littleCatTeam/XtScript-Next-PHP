@@ -1,6 +1,6 @@
 # Security Policy
 
-XtScript Engine is designed to execute template code with explicit capabilities and bounded resource usage. It is **not** an operating-system or process sandbox.
+XtScript Next for PHP is designed to execute template code with explicit capabilities and bounded resource usage. It is **not** an operating-system or process sandbox.
 
 ## Security model
 

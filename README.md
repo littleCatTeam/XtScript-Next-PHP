@@ -1,4 +1,4 @@
-# XtScript Engine
+# XtScript Next for PHP
 
 **Modern, extensible XtScript-compatible template engine for PHP 8.2+**
 

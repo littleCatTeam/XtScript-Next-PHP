@@ -12,7 +12,7 @@ use XtScript\Plugin\XtTagDefinition;
 /**
  * Example only: historical XtGem-style <xt:...> compatibility layer.
  *
- * None of these tags are built into XtScript Engine. Registering this plugin is
+ * None of these tags are built into XtScript Next for PHP. Registering this plugin is
  * an explicit application choice.
  */
 final class XtGemCompatibilityPlugin implements PluginInterface

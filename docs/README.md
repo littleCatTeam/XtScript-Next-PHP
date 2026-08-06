@@ -1,4 +1,4 @@
-# XtScript Engine documentation
+# XtScript Next for PHP documentation
 
 This directory documents the **core package as implemented in `src/`**. Historical XtGem `<xt:...>` services are not core functions; only the generic plugin hook is documented here.
 

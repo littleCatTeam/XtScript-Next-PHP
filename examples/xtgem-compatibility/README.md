@@ -1,7 +1,7 @@
 # Optional `<xt:...>` compatibility plugin example
 
 This directory demonstrates how an application can support historical XtGem-style
-`<xt:...>` calls **without adding any XtGem function to XtScript Engine core**.
+`<xt:...>` calls **without adding any XtGem function to XtScript Next for PHP core**.
 
 The engine only provides the generic `XtTagDefinition` plugin hook. Without a
 registered XT-tag plugin, `<xt:...>` remains literal output.
@@ -28,7 +28,7 @@ server services. Features such as file lists, counters, auth, blog, forum,
 guestbook, RSS and widgets require application-owned data/services. Implement
 `XtGemAdapterInterface` to map each tag to your own backend.
 
-This separation is intentional: the core remains an independent XtScript engine.
+This separation is intentional: the core remains an independent XtScript Next for PHP engine.
 
 ## Supported call shapes
 
